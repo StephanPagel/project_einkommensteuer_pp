@@ -10,37 +10,56 @@
 </head>
 
 <body>
-    <form action="" onsubmit="return false">
-        <label for="">Jahr:
-            <select name="" id="input_year">
-                <option value="2019" id="year_2019">2019</option>
-                <option value="2020" id="year_2020">2020</option>
-                <option value="2021" id="year_2021">2021</option>
-            </select>
-        </label>
-        <label for="">zu versteuerndes Einkommen:<input type=" number" name="" id="input_income"> Euro</label>
-        <p id="output_error"></p>
-        <label for="">
-            <label for="">
-                <input type="radio" name="veranlagung" id="input_person_one" value="1" checked>Einzelveranlagung
-            </label>
-            <label for="">
-                <input type="radio" name="veranlagung" id="input_person_two" value="2">Zusammenveranlagung
-            </label>
-        </label>
-        <label for="">Kirchensteuer:
-            <select name="" id="input_church">
-                <option value="0" id="input_0">keine</option>
-                <option value="8" id="input_8">8% (Bayern, BaWü)</option>
-                <option value="9" id="input_9">9% (übrige)</option>
-            </select>
-        </label>
+    <h1>Einkommensteuerrechner</h1>
 
-        <button onclick="calcZve()">Berechnen</button>
-    </form>
+    <section>
+        <form action="" onsubmit="return false">
+            <fieldset>
+                <label for="">Jahr:
+                    <select name="" id="input_year">
+                        <option value="2019" id="year_2019">2019</option>
+                        <option value="2020" id="year_2020">2020</option>
+                        <option value="2021" id="year_2021">2021</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset><label for="">zu versteuerndes Einkommen:<input type=" number" name="" id="input_income">
+                    Euro</label><span id="output_error"></span>
+            </fieldset>
+            <fieldset>
+                <label for="">
+                    <label for="">
+                        <input type="radio" name="veranlagung" id="input_person_one" value="1" checked>Einzelveranlagung
+                    </label>
+                    <label for="">
+                        <input type="radio" name="veranlagung" id="input_person_two" value="2">Zusammenveranlagung
+                    </label>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="">Kirchensteuer:
+                    <select name="" id="input_church">
+                        <option value="0" id="input_0">keine</option>
+                        <option value="8" id="input_8">8% (Bayern, BaWü)</option>
+                        <option value="9" id="input_9">9% (übrige)</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <button onclick="calcZve()">Berechnen</button>
+            </fieldset>
+        </form>
+        <h2>zu zahlende Steuern</h2>
+        <fieldset>
+            <p>Einkommensteuer: </p>
+            <p id="output_result"></p><span> Euro</span>
+        </fieldset>
+        <fieldset>
+            <p>Kirchensteuer: </p>
+            <p id="output_church"></p><span> Euro</span>
+        </fieldset>
+    </section>
 
-    <h1>zu zahlende Steuern</h1>
-    <p id="output_result"></p><span> Euro</span>
     <script src="assets/js/main.js"></script>
 </body>
 
