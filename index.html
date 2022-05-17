@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkommensteuerrechner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <form action="" onsubmit="return false">
+        <label for="">Jahr:
+            <select name="" id="input_year">
+                <option value="2019" id="year_2019">2019</option>
+                <option value="2020" id="year_2020">2020</option>
+                <option value="2021" id="year_2021">2021</option>
+            </select>
+        </label>
+        <label for="">zu versteuerndes Einkommen:<input type=" number" name="" id="input_income"> Euro</label>
+        <p id="output_error"></p>
+        <label for="">
+            <label for="">
+                <input type="radio" name="veranlagung" id="input_person_one" value="1" checked>Einzelveranlagung
+            </label>
+            <label for="">
+                <input type="radio" name="veranlagung" id="input_person_two" value="2">Zusammenveranlagung
+            </label>
+        </label>
+        <label for="">Kirchensteuer:
+            <select name="" id="input_church">
+                <option value="0" id="input_0">keine</option>
+                <option value="8" id="input_8">8% (Bayern, BaWü)</option>
+                <option value="9" id="input_9">9% (übrige)</option>
+            </select>
+        </label>
+
+        <button onclick="zvE()">Berechnen</button>
+    </form>
+
+    <h1>zu zahlende Steuern</h1>
+    <p id="output_result"></p><span> Euro</span>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
